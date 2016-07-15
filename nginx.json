@@ -1,0 +1,17 @@
+{
+    "id": "nginx",
+    "container": {
+    "type": "DOCKER",
+    "docker": {
+          "image": "alastairhm/simple-docker",
+          "network": "BRIDGE",
+          "portMappings": [
+            { "hostPort": 81, "containerPort": 80, "protocol": "tcp"}
+          ]
+        }
+    },
+    "acceptedResourceRoles": ["slave_public"],
+    "instances": 1,
+    "cpus": 0.1,
+    "mem": 64
+}
